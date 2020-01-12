@@ -2,103 +2,89 @@
 # Module 5 Final Project
 
 
-## Introduction
+## Understanding Happiness Through Machine Learning
 
-In this lesson, we'll review all the guidelines and specifications for the final project for Module 5.
+In this project, I analyzed and predicted happiness level in the U.S. through machine learning. I used the 2018 General Social Survey data, which is available [here](https://gss.norc.org).
 
-
-## Objectives
-
-* Understand all required aspects of the Final Project for Module 5
-* Understand all required deliverables
-* Understand what constitutes a successful project
-
-## Final Project Summary
-
-Congratulations! You've made it through another _intense_ module, and now you're ready to show off your newfound Machine Learning skills!
-
-![awesome](https://raw.githubusercontent.com/learn-co-curriculum/dsc-mod-5-project/master/smart.gif)
-
-All that remains for Module 5 is to complete the final project!
-
-## The Project
-
-For this project, you're going to select a dataset of your choosing and create a classification model. You'll start by identifying a problem you can solve with classification, and then identify a dataset. You'll then use everything you've learned about Data Science and Machine Learning thus far to source a dataset, preprocess and explore it, and then build and interpret a classification model that answers your chosen question.
+Since 1972, the General Social Survey (GSS) gathers data on contemporary American society in order to monitor and explain trends and constants in attitudes, behaviors, and attributes. Also, since the GSS adopted questions from earlier surveys, trends can be followed for up to 80 years.
 
 
-### Selecting a Data Set
+## EDA and visualizations
 
-We encourage you to be very thoughtful when identifying your problem and selecting your data set--an overscoped project goal or a poor data set can quickly bring an otherwise promising project to a grinding halt.
+> In a scale of 1-3, how happy are you?
 
-To help you select an appropriate data set for this project, we've set some guidelines:
+In 2018, more than half of the respondents answered that they are "pretty happy", followed by "very happy" and "not too happy".
 
-1. Your dataset should work for classification. The classification task can be either binary or multiclass, as long as it's a classification model.   
+![](https://github.com/wendysjkim/dsc-mod-5-project-online-ds-pt-051319/blob/work/images/Happiness.png)
 
-2. Your dataset needs to be of sufficient complexity. Try to avoid picking an overly simple dataset. Try to avoid extremely small datasets, as well as the most common datasets like titanic, iris, MNIST, etc. We want to see all the steps of the Data Science Process in this project--it's okay if the dataset is mostly clean, but we expect to see some preprocessing and exploration. See the following section, **_Data Set Constraints_**, for more information on this.   
+The breakdown of happiness level is fairly consistent across each gender, age groups and region. The composition varies at different income levels, with highest income level having the least percentage of not too happy responses.
 
-3. On the other end of the spectrum, don't pick a problem that's too complex, either. Stick to problems that you have a clear idea of how you can use machine learning to solve it. For now, we recommend you stay away from overly complex problems in the domains of Natural Language Processing or Computer Vision--although those domains make use of Supervised Learning, they come with a lot of other special requirements and techniques that you don't know yet (but you'll learn soon!). If you're chosen problem feels like you've overscoped, then it probably is. If you aren't sure if your problem scope is appropriate, double check with your instructor!  
-
-4. **_Serious Bonus Points_** if some or all of the data is data you have to source yourself through web scraping or interacting with a 3rd party API! Having projects that show off your ability to source data effectively make you look that much more impressive when showing your work off to potential employers!
-
-### Data Set Constraints
-
-When selecting a data set, be sure to take into consideration the following constraints:
-
-1. Your data set can't be one we've already worked with in any labs.
-2. Your data set should contain a minimum of 1000 rows.    
-3. Your data set should contain a minimum of 10 predictor columns, before any one-hot encoding is performed.   
-4. Your instructor must provide final approval on your data set.
-
-### Problem First, or Data First?
-
-There are two ways that you can about getting started: **_Problem-First_** or **_Data-First_**.
-
-**_Problem-First_**: Start with a problem that you want to solve with classification, and then try to find the data you need to solve it.  If you can't find any data to solve your problem, then you should pick another problem.
-
-**_Data-First_**: Take a look at some of the most popular internet repositories of cool data sets we've listed below. If you find a data set that's particularly interesting for you, then it's totally okay to build your problem around that data set.
-
-There are plenty of amazing places that you can get your data from. We recommend you start looking at data sets in some of these resources first:
-
-* [UCI Machine Learning Datasets Repository](https://archive.ics.uci.edu/ml/datasets.html)
-* [Kaggle Datasets](https://www.kaggle.com/datasets)
-* [Awesome Datasets Repo on Github](https://github.com/awesomedata/awesome-public-datasets)
-* [New York City Open Data Portal](https://opendata.cityofnewyork.us/)
-* [Inside AirBNB ](http://insideairbnb.com/)
+> **Gender**
 
 
-## The Deliverables
+![](https://github.com/wendysjkim/dsc-mod-5-project-online-ds-pt-051319/blob/work/images/gender.png)
 
-For online students, your completed project should contain the following four deliverables:
+> **Age Groups**
 
-1. A **_Jupyter Notebook_** containing any code you've written for this project. This work will need to be pushed to your GitHub repository in order to submit your project.
 
-2. An organized **README.md** file in the GitHub repository that describes the contents of the repository. This file should be the source of information for navigating through the repository. 
+![](https://github.com/wendysjkim/dsc-mod-5-project-online-ds-pt-051319/blob/work/images/age.png)
 
-3. A **_[Blog Post](https://github.com/learn-co-curriculum/dsc-welcome-blogging)_**.
+> **Region**
 
-4. An **_"Executive Summary" PowerPoint Presentation_** that gives a brief overview of your problem/dataset, and each step of the OSEMN process.
 
-Note: On-campus students may have different deliverables, please speak with your instructor.
+![](https://github.com/wendysjkim/dsc-mod-5-project-online-ds-pt-051319/blob/work/images/region.png)
 
-### Jupyter Notebook Must-Haves
+> **Income**
 
-For this project, your Jupyter Notebook should meet the following specifications:
 
-**_Organization/Code Cleanliness_**
+![](https://github.com/wendysjkim/dsc-mod-5-project-online-ds-pt-051319/blob/work/images/income.png)
 
-* The notebook should be well organized, easy to follow, and code is commented where appropriate.  
-    * Level Up: The notebook contains well-formatted, professional looking markdown cells explaining any substantial code. All functions have docstrings that act as professional-quality documentation.  
-* The notebook is written to technical audiences with a way to both understand your approach and reproduce your results. The target audience for this deliverable is other data scientists looking to validate your findings.  
+One interesting question asked in the survey was number of hours that a respondent watched TV *a day*. Although more than 30% of observations were missing, it is interesting to see how proprotion of 'not too happy' cateogry peaks at around 9 hours of TV watched per day, but decreases as the number of TV hours increases.
 
-**_Process, Methodology, and Findings_**
+>**TV hours**
 
-* Your notebook should contain a clear record of your process and methodology for exploring and preprocessing your data, building and tuning a model, and interpreting your results.
-* We recommend you use the OSEMN process to help organize your thoughts and stay on track.
 
-### Blog Post Must-Haves
+![](https://github.com/wendysjkim/dsc-mod-5-project-online-ds-pt-051319/blob/work/images/tv.png)
 
-Refer back to the [Blogging Guidelines](https://github.com/learn-co-curriculum/dsc-welcome-blogging) for the technical requirements and blog ideas.
+## Feature Selection
+I only considered variables that had less than 1% missing observations. The missing threshold is very strict for the following reasons:
+- The target variable has a class imbalance problem, and the missing observations in the minority classes would worsen the class imbalance problem.
+- Some features have missing observations by construction. More specifically, if a respondent does not have a job, he/she won't be asked the follow-up question on how many hours he/she worked in the past week. Therefore, such features with missing observations are likely to have another features with less missing observations that have already covered the same topic, but with less detailed information.
+- The raw dataset has 2,348 features. Considering how most of the variables are categorical variables, the train data set would increase exponentially when the categorical variables are converted to dummy variables. Considering only features with the most comprehensive information would reduce the computation time.
 
-## Grading Rubric 
+Then, I identified total of 45 features to include in the model through following approaches.
 
-Online students can find a PDF of the grading rubric for the project [here](https://github.com/learn-co-curriculum/dsc-mod-5-project/blob/master/module5_project_rubric.pdf). _Note: On-campus students may have different requirements, please speak with your instructor._ 
+- Highest correlation to the target variable
+   - 20 continous variables
+   - 20 categorical variables (correlation ratio calculated as weighted variance of the mean of each category divided by the variance of all samples)
+   - Among these 40 variables with high correlation, I later dropped the features that are not directly related to the respondent, i.e. type of survey questionnaire, length of the interview, etc.
+- Additional potentially important variables 
+   - Manually identified after reviewing the data dictionary.
+   - Objectively identified through vanilla models using (a) all features and (b) all features, but focusing on the two minority classes - "very happy" and "not too happy".
+   
+## GridSearch
+After running several vanially models, I decided to go with random forest model as it had highest weighted F1 score.
+
+![](https://github.com/wendysjkim/dsc-mod-5-project-online-ds-pt-051319/blob/work/images/corr_vanilla.png)
+
+
+Then, I performed multiple grid searches to refine the model. The final model's performance is as below.
+
+
+![](https://github.com/wendysjkim/dsc-mod-5-project-online-ds-pt-051319/blob/work/images/corr_final_cm.png)
+![](https://github.com/wendysjkim/dsc-mod-5-project-online-ds-pt-051319/blob/work/images/corr_final_featimp.png)
+
+
+
+I did similar exercise but focusing on the two minority classes, as the majority ("pretty happy") class was the category that I was least interested in. For this model, XGBoost performed the best.
+
+![](https://github.com/wendysjkim/dsc-mod-5-project-online-ds-pt-051319/blob/work/images/bi_final_cm.png)
+![](https://github.com/wendysjkim/dsc-mod-5-project-online-ds-pt-051319/blob/work/images/bi_final_featimp.png)
+
+## Conclusion
+The model suffered from class imbalance problem, even though I considered features with least missing observations and oversampled the train dataset using SMOTE. 
+
+Possible next steps are:
+- Analyze each feature more deeply, especially those didn't satisfy the missing observation threshold. The variables that are dependent of prevous questions could be cleaned further.
+- Since the model performance increased significantly when focused only on minority classes, I could look into predicting happiness through multiple models, i.e. first predict whether or not a respondent is "pretty happy", then predict if "not too happy" or "very happy".
+
