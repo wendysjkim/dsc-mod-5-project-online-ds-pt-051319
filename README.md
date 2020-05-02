@@ -1,8 +1,8 @@
-
-# Module 5 Final Project
-
-
 ## Understanding Happiness Through Machine Learning
+
+- [Data Used](https://github.com/wendysjkim/dsc-mod-5-project-online-ds-pt-051319/blob/work/GSS2018.dta)
+- [Jupyter Notebook](https://github.com/wendysjkim/dsc-mod-5-project-online-ds-pt-051319/blob/work/analysis.ipynb)
+- [Summary of Findings](https://github.com/wendysjkim/dsc-mod-5-project-online-ds-pt-051319/blob/work/presentation.pdf)
 
 In this project, I analyzed and predicted happiness level in the U.S. through machine learning. I used the 2018 General Social Survey data, which is available [here](https://gss.norc.org).
 
@@ -28,7 +28,7 @@ The breakdown of happiness level is fairly consistent across each gender, age gr
 
 
 ![](https://github.com/wendysjkim/dsc-mod-5-project-online-ds-pt-051319/blob/work/images/age.png)
-
+![](https://github.com/wendysjkim/dsc-mod-5-project-online-ds-pt-051319/blob/work/images/Legend.png)
 > **Region**
 
 
