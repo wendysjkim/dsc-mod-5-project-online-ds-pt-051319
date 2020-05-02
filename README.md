@@ -21,9 +21,9 @@ The breakdown of happiness level is fairly consistent across each gender, age gr
 
 > **Gender**
 
-
+Legend:
+Red - Female; Blue - Male
 ![](https://github.com/wendysjkim/dsc-mod-5-project-online-ds-pt-051319/blob/work/images/gender.png)
-![](https://github.com/wendysjkim/dsc-mod-5-project-online-ds-pt-051319/blob/work/images/Legend.png)
 
 > **Age Groups**
 
